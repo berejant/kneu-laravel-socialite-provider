@@ -28,9 +28,7 @@ For example:
 
 * Add `SocialiteProviders\Manager\SocialiteWasCalled` event to your `listen[]` array  in `<app_name>/Providers/EventServiceProvider`.
 
-* Add your listeners (i.e. the ones from the providers) to the `SocialiteProviders\Manager\SocialiteWasCalled[]` that you just created.
-
-* The listener that you add for this provider is `'\SocialiteProviders\Kneu\KneuExtendSocialite@handle',`.
+* Add listener `'\SocialiteProviders\Kneu\KneuExtendSocialite@handle'` to the `SocialiteProviders\Manager\SocialiteWasCalled[]`.
 
 
 For example:
@@ -49,7 +47,7 @@ For example:
 Append provider values to your `.env` file
 
 ```
-KNEU_KEY=yout_application-id
+KNEU_KEY=your_application_id
 KNEU_SECRET=your_secret
 KNEU_REDIRECT_URI=https://example.com/login/complete
 ```
@@ -57,9 +55,9 @@ KNEU_REDIRECT_URI=https://example.com/login/complete
 
 ## Basic Usage
 
-Next, you are ready to authenticate users via KNEU! You will need treee routes:
-* one for redirecting the user to the OAuth provider
-* secind for receiving the callback from the provider after authentication
+Next, you are ready to authenticate users via KNEU! You will need tree routes:
+* first for redirecting the user to the KNEU OAuth provider
+* second for receiving the callback from the KNEU provider after authentication
 * third for logout.
 
 Example of Controller
@@ -170,4 +168,5 @@ $user->sex; // only for student, but not always correct
 ```
 
 ### More details
+
 See documentation for [Laravel Socialite Providers](https://socialiteproviders.github.io/).
