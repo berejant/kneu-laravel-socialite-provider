@@ -95,8 +95,10 @@ class LoginController extends Controller
         return Socialite::with('kneu');
     }
 
-    public function login()
+    public function login(Request $request)
     {
+        $request->session()->put('url.intended', url()->previous());
+
         return $this->getProvider()->redirect();
     }
 
