@@ -148,7 +148,7 @@ Route::get('/logout', 'Auth\LoginController@logout');
 Once you have a user instance, you can grab a few more details about the user:
 
 ```php
-$user = Socialite::driver('github')->user();
+$user = Socialite::driver('kneu')->user();
 
 // OAuth Two Providers
 $token = $user->token;
