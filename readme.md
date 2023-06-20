@@ -42,6 +42,15 @@ For example:
     ];
 ```
 
+### 3. Add configuration to `config/services.php`
+```
+'kneu' => [    
+  'client_id' => env('KNEU_KEY'),  
+  'client_secret' => env('KNEU_SECRET'),  
+  'redirect' => env('KNEU_REDIRECT_URI') 
+],
+```
+
 ### 4. Environment Variables
 
 Append provider values to your `.env` file
